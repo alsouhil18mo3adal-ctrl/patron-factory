@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Artex Confection — Couture Traditionnelle & Moderne | Annaba, Algérie</title>
-  <meta name="description" content="Artex Confection — Maison de confection à Annaba, Algérie. Tenue traditionnelle, prêt-à-porter moderne et marque propre. Livraison garantie dans les 69 wilayas d'Algérie." />
-  <meta name="keywords" content="artex confection, couture algérie, traditionnel moderne, burnous, haïk, caftan, djellaba, marque propre, vêtements annaba, livraison wilaya" />
+  <title>Patron — Fashion & Textile Company | Premium Manufacturing & Training</title>
+  <meta name="description" content="Patron — Premium textile manufacturing, custom designs, and training in sewing & pattern making. In-person & online courses. Sustainability, quality, and creativity." />
+  <meta name="keywords" content="patron factory, textile manufacturing, sewing training, pattern making, fashion, custom designs, Algeria" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet" />
@@ -138,8 +138,8 @@
       padding:.5rem 4rem;
     }
     .nav-logo { display:flex; align-items:center; gap:1.2rem; text-decoration:none; }
-    .nav-logo img { height:120px; width:auto; transition:opacity var(--tr); }
-    .nav-logo:hover img { opacity:.85; }
+    .nav-logo-img { height:50px; width:auto; transition:opacity var(--tr); filter:drop-shadow(0 2px 4px rgba(0,0,0,.1)); }
+    .nav-logo:hover .nav-logo-img { opacity:.85; transform:scale(1.05); }
     .nav-logo-text { font-family:var(--ff-display); font-size:1.1rem; font-weight:600; color:var(--fabric-blue); letter-spacing:.02em; line-height:1.2; }
     .nav-logo-text span { display:block; font-size:.8rem; font-style:italic; color:var(--thread-gold); font-weight:400; }
     
@@ -197,25 +197,34 @@
     .d-mask-path { stroke-dasharray:2000; stroke-dashoffset:2000; animation:drawLine 2.4s cubic-bezier(.25,.46,.45,.94) .3s forwards; }
     .needle-el { offset-path:path('M -50 200 C 350 80, 900 700, 1550 520'); offset-rotate:auto; animation:moveNeedle 2.4s cubic-bezier(.25,.46,.45,.94) .3s forwards; opacity:0; }
 
-    .hero-content { position:relative; z-index:2; max-width:880px; width:100%; }
+    .hero-grid { display:flex; flex-direction:column; align-items:center; text-align:center; position:relative; z-index:2; width:100%; }
+    .hero-left { position:relative; max-width:800px; }
+    .hero-right { display:none; }
+
+    .hero-content { position:relative; z-index:2; width:100%; display:flex; flex-direction:column; align-items:center; }
     .hero-tagline { font-family:var(--ff-mono); font-size:.8rem; letter-spacing:.25em; color:var(--thread-gold); text-transform:uppercase; margin-bottom:1.5rem; display:block; opacity:0; animation:fadeUp .6s ease forwards; }
-    .hero-heading { font-family:var(--ff-display); font-size:clamp(3rem,7.5vw,6rem); font-weight:600; line-height:1.05; color:var(--fabric-blue); margin-bottom:1rem; opacity:0; animation:fadeUp .7s ease .2s forwards; }
+    .hero-heading { font-family:var(--ff-display); font-size:clamp(2.6rem,6vw,4.5rem); font-weight:600; line-height:1.05; color:var(--fabric-blue); margin-bottom:1rem; opacity:0; animation:fadeUp .7s ease .2s forwards; text-align:center; }
     .hero-heading span { display:block; font-style:italic; color:var(--thread-gold); font-weight:400; }
 
     .stitch-svg { display:block; width:100%; max-width:550px; height:25px; margin-bottom:2rem; }
     .stitch-path { stroke:var(--thread-gold); stroke-width:1.5; stroke-linecap:round; fill:none; stroke-dasharray:800; stroke-dashoffset:800; animation:drawLine 1.5s cubic-bezier(.4,0,.2,1) .5s forwards; }
 
-    .hero-sub { font-size:1.15rem; color:var(--seam-gray); max-width:540px; margin-bottom:2.5rem; line-height:1.85; opacity:0; animation:fadeUp .7s ease .6s forwards; }
+    .hero-sub { font-size:1.05rem; color:var(--seam-gray); max-width:600px; margin-bottom:2.5rem; line-height:1.85; opacity:0; animation:fadeUp .7s ease .6s forwards; text-align:center; }
     .hero-sub strong { color:var(--ink); font-weight:600; }
-    .hero-cta-group { display:flex; gap:1.5rem; opacity:0; animation:fadeUp .7s ease .8s forwards; }
+    .hero-sub ul { list-style:none; padding:0; margin:0; }
+    .hero-sub ul li { padding:.3rem 0; position:relative; padding-left:1.2rem; display:inline-block; }
+    .hero-sub ul li::before { content:''; position:absolute; left:0; top:.75rem; width:6px; height:6px; background:var(--thread-gold); border-radius:50%; }
+    .hero-cta-group { display:flex; gap:1.5rem; opacity:0; animation:fadeUp .7s ease .8s forwards; justify-content:center; }
+
+    .hero-needle-img { width:100%; max-width:420px; height:auto; opacity:0; animation:fadeUp .8s ease .4s forwards; filter:drop-shadow(0 20px 40px rgba(0,0,0,.08)); transition:transform var(--tr); }
+    .hero-needle-img:hover { transform:scale(1.03) rotate(-2deg); }
 
     .btn { display:inline-flex; align-items:center; justify-content:center; padding:1rem 2.2rem; font-family:var(--ff-body); font-size:.9rem; font-weight:700; letter-spacing:.05em; text-transform:uppercase; text-decoration:none; border-radius:2px; transition:all var(--tr); cursor:pointer; border:none; }
     .btn-gold { background:var(--thread-gold); color:var(--ink); border:1px solid var(--thread-gold); }
     .btn-gold:hover { background:#b3882e; border-color:#b3882e; transform:translateY(-2px); box-shadow:0 10px 20px rgba(196,154,60,.22); }
     .btn-outline { background:transparent; color:var(--fabric-blue); border:1.5px solid var(--fabric-blue); }
     .btn-outline:hover { background:var(--fabric-blue); color:var(--needle-white); transform:translateY(-2px); }
-    .hero-tilt-wrapper { perspective:1000px; width:100%; }
-    .hero-tilt-inner { transform-style:preserve-3d; transition:transform .1s ease; }
+    .hero-needle-img { max-width:420px; width:100%; height:auto; }
 
     /* ===================================================
        2. ABOUT — 4 STAT CARDS (2x2)
@@ -373,6 +382,8 @@
       .about-grid    { grid-template-columns:1fr; gap:4rem; }
       .services-grid { grid-template-columns:repeat(2,1fr); gap:2rem; }
       .contact-grid  { grid-template-columns:1fr; gap:4rem; }
+      .hero-sub ul li { display:block; text-align:center; }
+      .hero-cta-group { justify-content:center; }
     }
     @media (max-width:768px) {
       .nav-links { position:fixed; top:0; right:-100%; width:80%; max-width:320px; height:100vh; background:var(--needle-white); box-shadow:-10px 0 30px rgba(0,0,0,.06); flex-direction:column; justify-content:center; gap:2.5rem; transition:right var(--tr); z-index:999; }
@@ -452,31 +463,31 @@
   </div>
 
   <!-- NAV -->
-  <nav aria-label="Navigation principale">
+  <nav aria-label="Main navigation">
     <a href="#hero" class="nav-logo" id="brand-logo">
-      <img src="assets/artex-logo.png" alt="Artex Logo" />
+      <img src="images/logo.png" alt="Patron Factory" class="nav-logo-img" />
       <div class="nav-logo-text">
-        Artex<br><span>Textile Company</span>
+        Patron<br><span>Factory</span>
       </div>
     </a>
     
     <ul class="nav-center" id="menu-links" role="list">
-      <li><a href="#about">Notre Identité</a></li>
+      <li><a href="#about">About Us</a></li>
       <li><a href="#services">Services</a></li>
-      <li><a href="#process">Processus</a></li>
-      <li><a href="#gallery">Réalisations</a></li>
-      <li><a href="#contact" class="nav-cta">Prendre Contact</a></li>
+      <li><a href="#process">Process</a></li>
+      <li><a href="#gallery">Portfolio</a></li>
+      <li><a href="#contact" class="nav-cta">Get in Touch</a></li>
     </ul>
     
-    <div class="nav-right">
-      <div class="nav-tagline">Façonné avec <span>soin</span></div>
+      <div class="nav-right">
+      <div class="nav-tagline">Fashion & Textile <span>Company</span></div>
       <div class="language-toggle">
-        <button class="lang-btn active" data-lang="fr">FR</button>
+        <button class="lang-btn active" data-lang="en">EN</button>
         <button class="lang-btn" data-lang="ar">عربي</button>
       </div>
     </div>
     
-    <button class="hamburger" id="menu-toggle" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="menu-links">
+    <button class="hamburger" id="menu-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="menu-links">
       <span></span><span></span><span></span>
     </button>
   </nav>
@@ -500,20 +511,25 @@
     </svg>
 
     <div class="container">
-      <div class="hero-tilt-wrapper" id="hero-tilt">
-        <div class="hero-tilt-inner" id="hero-tilt-inner">
+      <div class="hero-grid">
+        <div class="hero-left">
           <div class="hero-content">
-            <span class="hero-tagline">Confection Traditionnelle & Moderne · خياطة تقليدية وعصرية</span>
+            <span class="hero-tagline">Fashion & Textile Company</span>
             <h1 class="hero-heading" id="hero-title">
-              Façonné avec<br>soin, <span>livré partout.</span>
+              Patron<span>| Fashion & Textile Company</span>
             </h1>
             <svg class="stitch-svg" viewBox="0 0 550 25" preserveAspectRatio="none" aria-hidden="true">
               <path class="stitch-path" d="M 5 20 L 30 5 L 55 20 L 80 5 L 105 20 L 130 5 L 155 20 L 180 5 L 205 20 L 230 5 L 255 20 L 280 5 L 305 20 L 330 5 L 355 20 L 380 5 L 405 20 L 430 5 L 455 20 L 480 5 L 505 20 L 530 10 L 545 10" />
             </svg>
-            <p class="hero-sub">
-              <strong>Artex Confection</strong> — De l'atelier à la livraison dans les 69 wilayas.
-              Vêtements traditionnels algériens & prêt-à-porter moderne, confection sur mesure et marque propre depuis <strong>Annaba</strong>.
-            </p>
+            <div class="hero-sub">
+              <p style="margin-bottom:1rem;">
+                <strong>🇩🇿 Premium textile manufacturing, custom designs, and training in sewing & pattern making.</strong>
+              </p>
+              <ul>
+                <li>🎓 In-person & online courses</li>
+                <li>🌿 Focused on sustainability, quality, and creativity.</li>
+              </ul>
+            </div>
             <div class="hero-cta-group">
               <a href="#services" class="btn btn-gold" id="btn-discover">Découvrir nos services</a>
               <a href="#contact"  class="btn btn-outline" id="btn-devis">Demander un Devis</a>
@@ -537,39 +553,39 @@
           <div class="stats-container">
             <div class="stat-card">
               <div class="stat-val" id="stat-wilayas">0</div>
-              <div class="stat-label">Wilayas couvertes <span class="stat-ar">توصيل لـ ٦٩ ولاية</span></div>
+              <div class="stat-label">Wilayas Covered <span class="stat-ar">توصيل لـ ٦٩ ولاية</span></div>
             </div>
             <div class="stat-card">
               <div class="stat-val">100%</div>
-              <div class="stat-label">Made in Algérie <span class="stat-ar">إنتاج جزائري ١٠٠٪</span></div>
+              <div class="stat-label">Made in Algeria <span class="stat-ar">إنتاج جزائري ١٠٠٪</span></div>
             </div>
             <div class="stat-card">
               <div class="stat-val" id="stat-years">0</div>
-              <div class="stat-label">Années d'expertise <span class="stat-ar">سنوات من الخبرة</span></div>
+              <div class="stat-label">Years of Expertise <span class="stat-ar">سنوات من الخبرة</span></div>
             </div>
             <div class="stat-card">
               <div class="stat-val">Private</div>
-              <div class="stat-label">Label confection <span class="stat-ar">إنتاج للعلامات الخاصة</span></div>
+              <div class="stat-label">Label Manufacturing <span class="stat-ar">إنتاج للعلامات الخاصة</span></div>
             </div>
           </div>
         </div>
 
         <!-- TEXT -->
         <div class="about-right reveal reveal-delay-2">
-          <span class="section-label">Qui sommes-nous · من نحن</span>
+          <span class="section-label">About Us · من نحن</span>
           <h2 class="about-title" id="about-head">
-            Du fil à la livraison —
-            <span>un savoir-faire complet.</span>
+            From fabric to finished product —
+            <span>a complete expertise.</span>
           </h2>
           <p>
-            Basée à <strong>Annaba</strong>, Artex Confection prend en charge l'ensemble du cycle de vie du vêtement :
-            de la <strong>couture et fabrication</strong> jusqu'au <strong>branding (marque propre)</strong>, puis à la
-            <strong>livraison directe</strong> dans les 69 wilayas d'Algérie.
+            Based in <strong>Annaba</strong>, Patron Factory manages the entire lifecycle of clothing:
+            from <strong>sewing and manufacturing</strong> to <strong>branding (private label)</strong>, and
+            <strong>direct delivery</strong> across Algeria.
           </p>
           <p>
-            Notre atelier maîtrise aussi bien la <strong>tenue traditionnelle algérienne</strong> — burnous, haïk, djellaba, caftan, karakou —
-            que le <strong>prêt-à-porter moderne</strong>. Cette double expertise nous permet de répondre à tous les segments du marché
-            avec la même rigueur artisanale et capacité industrielle.
+            Our workshop masters both <strong>traditional Algerian attire</strong> — burnous, haïk, djellaba, caftan, karakou —
+            and <strong>modern ready-to-wear</strong>. This dual expertise allows us to serve all market segments
+            with the same artisanal rigor and industrial capacity.
           </p>
         </div>
       </div>
@@ -582,20 +598,20 @@
   <section id="services" aria-labelledby="services-head">
     <div class="container">
       <div class="section-header reveal">
-        <span class="section-label">Nos Spécialités · خدماتنا</span>
+        <span class="section-label">Our Specialties · خدماتنا</span>
         <h2 class="section-title" id="services-head">
-          Du fil à l'étiquette,
-          <span>un service intégral.</span>
+          From thread to label,
+          <span>an integral service.</span>
         </h2>
         <p class="section-subtitle">
-          Confection, branding et logistique — une chaîne de valeur complète pour habiller l'Algérie.
+          Manufacturing, branding and logistics — a complete value chain to dress Algeria.
         </p>
       </div>
 
       <div class="services-grid">
 
         <!-- Card 1 — Confection -->
-        <div class="card-flip-container reveal" role="article" aria-label="Confection Traditionnelle et Moderne">
+        <div class="card-flip-container reveal" role="article" aria-label="Traditional and Modern Manufacturing">
           <div class="card-flip-inner">
             <div class="card-face card-front">
               <div class="icon-wrapper">
@@ -605,18 +621,18 @@
                   <path d="M20 4L8.12 15.88M14.47 14.48L20 20M8.12 8.12L12 12" stroke-linecap="round" stroke-linejoin="round" />
                 </svg>
               </div>
-              <h3>Confection <span>Traditionnel & Moderne</span></h3>
+              <h3>Manufacturing <span>Traditional & Modern</span></h3>
             </div>
             <div class="card-face card-back">
-              <h3>Couture & Fabrication</h3>
-              <p>Maîtrise de la tenue traditionnelle (haïk, burnous, djellaba, caftan, karakou) et du prêt-à-porter contemporain. Patronage, coupe numérique, montage et finition haut de gamme.</p>
-              <span class="tag">Traditionnel · Moderne · Sur série</span>
+              <h3>Sewing & Production</h3>
+              <p>Mastery of traditional attire (haïk, burnous, djellaba, caftan, karakou) and contemporary ready-to-wear. Pattern making, digital cutting, assembly and high-end finishing.</p>
+              <span class="tag">Traditional · Modern · Production</span>
             </div>
           </div>
         </div>
 
         <!-- Card 2 — Branding -->
-        <div class="card-flip-container reveal reveal-delay-1" role="article" aria-label="Marque Propre Private Label">
+        <div class="card-flip-container reveal reveal-delay-1" role="article" aria-label="Private Label Branding">
           <div class="card-flip-inner">
             <div class="card-face card-front">
               <div class="icon-wrapper">
@@ -625,18 +641,18 @@
                   <line x1="7" y1="7" x2="7.01" y2="7" stroke-linecap="round" />
                 </svg>
               </div>
-              <h3>Branding <span>Marque Propre / Private Label</span></h3>
+              <h3>Branding <span>Private Label</span></h3>
             </div>
             <div class="card-face card-back">
               <h3>Private Label</h3>
-              <p>Confection intégralement produite et étiquetée sous votre marque propre. Conception des étiquettes, conditionnement et finition selon vos cahiers des charges.</p>
-              <span class="tag">Étiquetage · Packaging · Identité</span>
+              <p>Fully manufactured and labeled under your own brand. Label design, packaging and finishing according to your specifications.</p>
+              <span class="tag">Labeling · Packaging · Identity</span>
             </div>
           </div>
         </div>
 
         <!-- Card 3 — Livraison -->
-        <div class="card-flip-container reveal reveal-delay-2" role="article" aria-label="Livraison 69 Wilayas">
+        <div class="card-flip-container reveal reveal-delay-2" role="article" aria-label="Delivery to 69 Wilayas">
           <div class="card-flip-inner">
             <div class="card-face card-front">
               <div class="icon-wrapper">
@@ -647,12 +663,12 @@
                   <circle cx="18.5" cy="18.5" r="2.5" />
                 </svg>
               </div>
-              <h3>Livraison <span>69 Wilayas d'Algérie</span></h3>
+              <h3>Delivery <span>69 Wilayas of Algeria</span></h3>
             </div>
             <div class="card-face card-back">
-              <h3>Logistique Nationale</h3>
-              <p>Réseau logistique couvrant la totalité des 69 wilayas. Expédition sécurisée, emballage professionnel et suivi en temps réel de vos commandes jusqu'à destination.</p>
-              <span class="tag">69 Wilayas · Suivi · Sécurisé</span>
+              <h3>National Logistics</h3>
+              <p>Logistics network covering all 69 wilayas. Secure shipping, professional packaging and real-time order tracking to destination.</p>
+              <span class="tag">69 Wilayas · Tracking · Secure</span>
             </div>
           </div>
         </div>
@@ -667,13 +683,13 @@
   <section id="process" aria-labelledby="process-head">
     <div class="container">
       <div class="section-header reveal">
-        <span class="section-label">Le Parcours · خطوات الإنتاج</span>
+        <span class="section-label">The Process · خطوات الإنتاج</span>
         <h2 class="section-title" id="process-head">
-          De la commande
-          <span>à la livraison.</span>
+          From order
+          <span>to delivery.</span>
         </h2>
         <p class="section-subtitle">
-          Un processus rigoureux en quatre étapes pour garantir qualité, délais et satisfaction totale.
+          A rigorous four-step process to guarantee quality, deadlines and total satisfaction.
         </p>
       </div>
 
@@ -686,23 +702,23 @@
         <div class="timeline-grid">
           <div class="timeline-step reveal">
             <div class="step-badge"><span>01</span></div>
-            <h3>Conception <span>Étude & Patronage</span></h3>
-            <p>Définition du modèle, sélection des matières et ajustement des patrons selon vos spécifications techniques.</p>
+            <h3>Design <span>Study & Pattern Making</span></h3>
+            <p>Model definition, material selection and pattern adjustment according to your technical specifications.</p>
           </div>
           <div class="timeline-step reveal reveal-delay-1">
             <div class="step-badge"><span>02</span></div>
-            <h3>Confection <span>Atelier Annaba</span></h3>
-            <p>Coupe numérique, couture de précision, broderie et ornements, finition et contrôle qualité rigoureux en usine.</p>
+            <h3>Manufacturing <span>Annaba Workshop</span></h3>
+            <p>Digital cutting, precision sewing, embroidery and ornaments, finishing and rigorous quality control in-house.</p>
           </div>
           <div class="timeline-step reveal reveal-delay-2">
             <div class="step-badge"><span>03</span></div>
-            <h3>Branding <span>Marque & Étiquetage</span></h3>
-            <p>Apposition de votre étiquette et conditionnement personnalisé selon vos standards de marque propre.</p>
+            <h3>Branding <span>Label & Tagging</span></h3>
+            <p>Application of your label and personalized packaging according to your private label standards.</p>
           </div>
           <div class="timeline-step reveal reveal-delay-3">
             <div class="step-badge"><span>04</span></div>
-            <h3>Livraison <span>69 Wilayas</span></h3>
-            <p>Expédition directe vers votre wilaya : emballage sécurisé et notification de suivi jusqu'à réception.</p>
+            <h3>Delivery <span>All Wilayas</span></h3>
+            <p>Direct shipping to your wilaya: secure packaging and tracking notification until receipt.</p>
           </div>
         </div>
       </div>
@@ -718,13 +734,13 @@
   <section id="gallery" aria-labelledby="gallery-head">
     <div class="container">
       <div class="section-header reveal">
-        <span class="section-label">Réalisations · أعمالنا</span>
+        <span class="section-label">Our Work · أعمالنا</span>
         <h2 class="section-title" id="gallery-head">
           Collections
-          <span>Traditionnelles & Modernes.</span>
+          <span>Traditional & Modern.</span>
         </h2>
         <p class="section-subtitle">
-          Pièces confectionnées dans nos ateliers — du vêtement traditionnel algérien au prêt-à-porter contemporain.
+          Pieces manufactured in our workshops — from traditional Algerian clothing to contemporary ready-to-wear.
         </p>
       </div>
 
@@ -733,72 +749,72 @@
         <!-- SLOT 1 — add: background-image: url('image1.jpg') to .gallery-img -->
         <div class="gallery-card reveal" data-tilt-gallery>
           <div class="gallery-img" style="background-image:url('images/gallery-01.jpg');"></div>
-          <span class="gallery-badge">Réf: TR-01</span>
+          <span class="gallery-badge">Ref: TR-01</span>
           <div class="gallery-info">
-            <div class="gallery-name">Djellaba Élégante <span>Traditionnel · تقليدي</span></div>
+            <div class="gallery-name">Elegant Djellaba <span>Traditional · تقليدي</span></div>
           </div>
         </div>
 
         <!-- SLOT 2 — add: background-image: url('image2.jpg') to .gallery-img -->
         <div class="gallery-card reveal reveal-delay-1" data-tilt-gallery>
           <div class="gallery-img" style="background-image:url('images/gallery-02.jpg');"></div>
-          <span class="gallery-badge">Réf: MN-02</span>
+          <span class="gallery-badge">Ref: MN-02</span>
           <div class="gallery-info">
-            <div class="gallery-name">Collection Urbaine <span>Moderne · عصري</span></div>
+            <div class="gallery-name">Urban Collection <span>Modern · عصري</span></div>
           </div>
         </div>
 
         <!-- SLOT 3 — add: background-image: url('image3.jpg') to .gallery-img -->
         <div class="gallery-card reveal reveal-delay-2" data-tilt-gallery>
           <div class="gallery-img" style="background-image:url('images/gallery-03.jpg');"></div>
-          <span class="gallery-badge">Réf: TR-03</span>
+          <span class="gallery-badge">Ref: TR-03</span>
           <div class="gallery-info">
-            <div class="gallery-name">Caftan de Cérémonie <span>Traditionnel · تقليدي</span></div>
+            <div class="gallery-name">Ceremony Caftan <span>Traditional · تقليدي</span></div>
           </div>
         </div>
 
         <!-- SLOT 4 — add: background-image: url('image4.jpg') to .gallery-img -->
         <div class="gallery-card reveal reveal-delay-3" data-tilt-gallery>
           <div class="gallery-img" style="background-image:url('images/gallery-04.jpg');"></div>
-          <span class="gallery-badge">Réf: MN-04</span>
+          <span class="gallery-badge">Ref: MN-04</span>
           <div class="gallery-info">
-            <div class="gallery-name">Chemise Lin Premium <span>Moderne · عصري</span></div>
+            <div class="gallery-name">Premium Linen Shirt <span>Modern · عصري</span></div>
           </div>
         </div>
 
         <!-- SLOT 5 — add: background-image: url('image5.jpg') to .gallery-img -->
         <div class="gallery-card reveal" data-tilt-gallery>
           <div class="gallery-img" style="background-image:url('images/gallery-05.jpg');"></div>
-          <span class="gallery-badge">Réf: TR-05</span>
+          <span class="gallery-badge">Ref: TR-05</span>
           <div class="gallery-info">
-            <div class="gallery-name">Burnous Cérémonie <span>Traditionnel · تقليدي</span></div>
+            <div class="gallery-name">Ceremony Burnous <span>Traditional · تقليدي</span></div>
           </div>
         </div>
 
         <!-- SLOT 6 — add: background-image: url('images/gallery-02.jpg') to .gallery-img -->
         <div class="gallery-card reveal reveal-delay-1" data-tilt-gallery>
           <div class="gallery-img" style="background-image:url('images/gallery-06.jpg');"></div>
-          <span class="gallery-badge">Réf: MN-06</span>
+          <span class="gallery-badge">Ref: MN-06</span>
           <div class="gallery-info">
-            <div class="gallery-name">Tailleur Femme <span>Moderne · عصري</span></div>
+            <div class="gallery-name">Women's Tailleur <span>Modern · عصري</span></div>
           </div>
         </div>
 
         <!-- SLOT 7 — add: background-image: url('images/gallery-03.jpg') to .gallery-img -->
         <div class="gallery-card reveal reveal-delay-2" data-tilt-gallery>
           <div class="gallery-img" style="background-image:url('images/gallery-07.jpg');"></div>
-          <span class="gallery-badge">Réf: TR-07</span>
+          <span class="gallery-badge">Ref: TR-07</span>
           <div class="gallery-info">
-            <div class="gallery-name">Haïk & Voile Orné <span>Traditionnel · تقليدي</span></div>
+            <div class="gallery-name">Haïk & Ornamented Veil <span>Traditional · تقليدي</span></div>
           </div>
         </div>
 
         <!-- SLOT 8 — add: background-image: url('images/gallery-04.jpg') to .gallery-img -->
         <div class="gallery-card reveal reveal-delay-3" data-tilt-gallery>
           <div class="gallery-img" style="background-image:url('images/gallery-08.jpg');"></div>
-          <span class="gallery-badge">Réf: MN-08</span>
+          <span class="gallery-badge">Ref: MN-08</span>
           <div class="gallery-info">
-            <div class="gallery-name">Ensemble Sport-Chic <span>Moderne · عصري</span></div>
+            <div class="gallery-name">Sport-Chic Ensemble <span>Modern · عصري</span></div>
           </div>
         </div>
 
@@ -814,11 +830,11 @@
       <div class="contact-grid">
 
         <div class="contact-details reveal">
-          <span class="section-label">Nous Joindre · اتصل بنا</span>
-          <h2 id="contact-head">Démarrons votre <span>nouvelle collection.</span></h2>
+          <span class="section-label">Contact Us · اتصل بنا</span>
+          <h2 id="contact-head">Let's start your <span>new collection.</span></h2>
           <p class="contact-intro">
-            Vous souhaitez lancer une production sous marque propre, commander des pièces traditionnelles ou du prêt-à-porter en gros ?
-            Remplissez le formulaire ou contactez directement nos bureaux à Annaba.
+            Want to launch a private label production, order traditional pieces or wholesale ready-to-wear?
+            Fill out the form or contact our offices directly in Annaba.
           </p>
           <div class="contact-list">
             <div class="contact-item">
@@ -826,8 +842,8 @@
                 <svg viewBox="0 0 24 24"><path d="M12 2a8 8 0 0 0-8 8c0 5.25 8 12 8 12s8-6.75 8-12a8 8 0 0 0-8-8zm0 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6z" /></svg>
               </div>
               <div class="contact-content">
-                <h4>Adresse des Ateliers</h4>
-                <p>Artex Confection<br>Zone Industrielle, Annaba — Algérie</p>
+                <h4>Workshop Address</h4>
+                <p>Patron Factory<br>Zone Industrielle, Annaba — Algeria</p>
               </div>
             </div>
             <div class="contact-item">
@@ -835,7 +851,7 @@
                 <svg viewBox="0 0 24 24"><path d="M6.62 10.79a15.15 15.15 0 0 0 6.59 6.59l2.2-2.2a1 1 0 0 1 1.11-.27 11.72 11.72 0 0 0 3.7.58 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A18 18 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1 11.72 11.72 0 0 0 .58 3.7 1 1 0 0 1-.27 1.11l-2.19 2.18z" /></svg>
               </div>
               <div class="contact-content">
-                <h4>Téléphone Commercial</h4>
+                <h4>Commercial Phone</h4>
                 <p><a href="tel:+21338451234">+213 (0) 38 45 12 34</a><br><a href="tel:+213770123456">+213 (0) 770 12 34 56</a></p>
               </div>
             </div>
@@ -844,35 +860,35 @@
                 <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" /></svg>
               </div>
               <div class="contact-content">
-                <h4>Courriel & Devis</h4>
-                <p><a href="mailto:contact@artex-confection.dz">contact@artex-confection.dz</a><br><a href="mailto:commercial@artex-confection.dz">commercial@artex-confection.dz</a></p>
+                <h4>Email & Quotes</h4>
+                <p><a href="mailto:contact@patron-factory.dz">contact@patron-factory.dz</a><br><a href="mailto:commercial@patron-factory.dz">commercial@patron-factory.dz</a></p>
               </div>
             </div>
           </div>
         </div>
 
         <div class="form-container reveal reveal-delay-2">
-          <form class="contact-form" id="artex-contact-form" novalidate>
+          <form class="contact-form" id="patron-contact-form" novalidate>
             <div class="form-row">
               <div class="field">
-                <label for="form-nom">Nom complet / Entreprise</label>
-                <input type="text" id="form-nom" class="fc" placeholder="Votre nom ou société" required />
+                <label for="form-nom">Full Name / Company</label>
+                <input type="text" id="form-nom" class="fc" placeholder="Your name or company" required />
               </div>
               <div class="field">
-                <label for="form-phone">Téléphone</label>
+                <label for="form-phone">Phone</label>
                 <input type="tel" id="form-phone" class="fc" placeholder="+213 (0) X XX XX XX" required />
               </div>
             </div>
 
             <div class="form-row">
               <div class="field">
-                <label for="form-email">Adresse Email</label>
-                <input type="email" id="form-email" class="fc" placeholder="votre@email.com" required />
+                <label for="form-email">Email Address</label>
+                <input type="email" id="form-email" class="fc" placeholder="your@email.com" required />
               </div>
               <div class="field">
-                <label for="form-wilaya">Votre Wilaya</label>
+                <label for="form-wilaya">Your Wilaya</label>
                 <select id="form-wilaya" class="fc" required>
-                  <option value="" disabled selected>Sélectionnez...</option>
+                  <option value="" disabled selected>Select...</option>
                   <option value="01">01 - Adrar</option>
                   <option value="02">02 - Chlef</option>
                   <option value="03">03 - Laghouat</option>
@@ -927,22 +943,22 @@
             </div>
 
             <div class="field">
-              <label for="form-service">Type de service souhaité</label>
+              <label for="form-service">Type of service desired</label>
               <select id="form-service" class="fc" required>
-                <option value="" disabled selected>Choisissez le service...</option>
-                <option value="trad">Vêtement Traditionnel (djellaba, caftan, haïk…)</option>
-                <option value="modern">Prêt-à-Porter Moderne</option>
-                <option value="marque-propre">Marque Propre / Private Label</option>
-                <option value="gros">Commande en Gros / B2B</option>
+                <option value="" disabled selected>Choose the service...</option>
+                <option value="trad">Traditional Clothing (djellaba, caftan, haïk…)</option>
+                <option value="modern">Modern Ready-to-Wear</option>
+                <option value="marque-propre">Private Label / Custom Branding</option>
+                <option value="gros">Wholesale Order / B2B</option>
               </select>
             </div>
 
             <div class="field">
-              <label for="form-message">Détails de votre projet</label>
-              <textarea id="form-message" class="fc" placeholder="Décrivez votre besoin, le type de vêtement, le volume estimé..." required></textarea>
+              <label for="form-message">Project details</label>
+              <textarea id="form-message" class="fc" placeholder="Describe your needs, the type of clothing, estimated volume..." required></textarea>
             </div>
 
-            <button type="submit" class="btn btn-gold" id="btn-form-submit">Envoyer la demande</button>
+            <button type="submit" class="btn btn-gold" id="btn-form-submit">Send Request</button>
             <div class="form-status" id="form-response-status" role="alert"></div>
           </form>
         </div>
@@ -952,11 +968,11 @@
       <div class="footer-divider" aria-hidden="true"></div>
 
       <div class="footer-bottom">
-        <a href="#hero" class="footer-brand">Artex<span>.</span>Confection</a>
-        <div class="footer-tagline">L'élégance algérienne, façonnée avec soin.</div>
+        <a href="#hero" class="footer-brand">Patron<span>.</span>Factory</a>
+        <div class="footer-tagline">Premium textile manufacturing, training & custom designs.</div>
         <div class="footer-copy">
-          © 2026 Artex Confection — Annaba, Algérie. Tous droits réservés.<br>
-          Confection · Branding · Livraison — 69 Wilayas.
+          © 2026 Patron Factory — Annaba, Algeria. All rights reserved.<br>
+          Manufacturing · Branding · Delivery — 69 Wilayas.
         </div>
       </div>
 
@@ -1027,19 +1043,6 @@
             });
             pts.forEach(p=>{p.upd();p.drw();}); cx.globalAlpha=1; requestAnimationFrame(anim);
           })();
-        }
-      }
-
-      /* ── Hero Tilt ── */
-      if (!noMotion) {
-        const ht = document.getElementById('hero-tilt');
-        const hi = document.getElementById('hero-tilt-inner');
-        if (ht && hi) {
-          ht.addEventListener('mousemove', e => {
-            const r = ht.getBoundingClientRect();
-            hi.style.transform = `rotateX(${((e.clientY-r.top-r.height/2)/(r.height/2))*-5}deg) rotateY(${((e.clientX-r.left-r.width/2)/(r.width/2))*5}deg)`;
-          });
-          ht.addEventListener('mouseleave', () => hi.style.transform = 'rotateX(0deg) rotateY(0deg)');
         }
       }
 
@@ -1130,7 +1133,7 @@
       }
 
       /* ── Contact Form ── */
-      const form = document.getElementById('artex-contact-form');
+      const form = document.getElementById('patron-contact-form');
       const stat = document.getElementById('form-response-status');
       if (form && stat) {
         form.querySelectorAll('.fc').forEach(f => {
@@ -1141,17 +1144,17 @@
           if (!form.checkValidity()) {
             form.querySelectorAll('.fc').forEach(f => f.classList.toggle('invalid', !f.checkValidity()));
             stat.className = 'form-status error';
-            stat.textContent = 'Veuillez remplir tous les champs obligatoires.';
+            stat.textContent = 'Please fill in all required fields.';
             stat.style.display = 'block';
             return;
           }
           form.querySelectorAll('.fc').forEach(f => f.classList.remove('invalid'));
           stat.className = 'form-status';
-          stat.textContent = 'Envoi en cours...';
+          stat.textContent = 'Sending...';
           stat.style.display = 'block';
           setTimeout(() => {
             stat.className = 'form-status success';
-            stat.textContent = 'Merci ! Votre demande a été reçue par notre atelier à Annaba. Nous vous contacterons sous 24h.';
+            stat.textContent = 'Thank you! Your request has been received by our workshop in Annaba. We will contact you within 24 hours.';
             form.reset();
           }, 1500);
         });
@@ -1159,7 +1162,7 @@
 
       /* ── Language Toggle ── */
       const langBtns = document.querySelectorAll('.lang-btn');
-      let currentLang = 'fr';
+      let currentLang = 'en';
       
       langBtns.forEach(btn => {
         btn.addEventListener('click', () => {
@@ -1172,7 +1175,7 @@
             document.documentElement.lang = 'ar';
             document.documentElement.dir = 'rtl';
           } else {
-            document.documentElement.lang = 'fr';
+            document.documentElement.lang = 'en';
             document.documentElement.dir = 'ltr';
           }
           
